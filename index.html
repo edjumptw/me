@@ -7,54 +7,68 @@
 <meta property="og:title" content="陳執董 edjump | BNC 國際人脈商業建橋網絡">
 <meta property="og:description" content="幫助台灣人看見亞洲大陸市場的機會。">
 <meta property="og:type" content="profile">
-<meta name="theme-color" content="#F2F2F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B0B0C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
 <title>陳執董 edjump | BNC 國際人脈商業建橋網絡</title>
 <style>
 /* ─────────────────────────────────────────────
-   設計標記：淺色為底、單一重點色、其餘走灰階。
-   尺寸一律 rem／em，使用者放大字級時版面不垮。
+   設計標記見 DESIGN.md。
+   系統分組底、實色卡片、單一品牌色。
+   浮在內容上的導覽才用玻璃。尺寸一律 rem／em。
    ───────────────────────────────────────────── */
 :root{
-  --bg:#F2F2F4; --surface:#FFFFFF; --fill:#E6E6EA; --fill-2:#EFEFF2; --seg-on:#FFFFFF;
-  --ink:#16181B; --ink-2:#5A6068; --ink-3:#8A9099;
-  --sep:rgba(22,24,27,.12); --edge:rgba(22,24,27,.08);
-  --accent:#8A6538; --accent-tint:#F4EDE2; --on-accent:#FFFFFF;
-  --ok:#2C7349; --warn:#8A6010; --danger:#C0392B;
-  --bar:rgba(242,242,244,.72);
-  --shadow:0 .0625rem .1875rem rgba(0,0,0,.08), 0 0 0 .03125rem rgba(0,0,0,.04);
+  color-scheme:light dark;
+  --bg:#F2F2F7; --surface:#FFFFFF;
+  --fill:rgba(120,120,128,.16); --fill-2:rgba(120,120,128,.12); --seg-on:#FFFFFF;
+  --ink:#1D1D1F; --ink-2:rgba(60,60,67,.78); --ink-3:rgba(60,60,67,.48);
+  --sep:rgba(60,60,67,.16); --edge:rgba(29,29,31,.08);
+  --accent:#8A6538; --accent-tint:rgba(138,101,56,.12); --on-accent:#FFFFFF;
+  --ok:#248A3D; --warn:#B25000; --danger:#D70015;
+  --material:rgba(242,242,247,.72); --material-hi:rgba(255,255,255,.7);
+  --shadow:0 .03125rem .125rem rgba(0,0,0,.04), 0 0 0 .03125rem rgba(0,0,0,.05);
+  --shadow-float:0 .625rem 1.75rem rgba(0,0,0,.08), 0 0 0 .03125rem rgba(0,0,0,.06);
+  --radius:1.375rem; --radius-sm:1.125rem; --radius-seg:.75rem; --pad-seg:.1875rem;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --bg:#0B0B0C; --surface:#1A1B1D; --fill:#26282B; --fill-2:#232528; --seg-on:#3A3D41;
-    --ink:#ECEEF0; --ink-2:#A6ADB4; --ink-3:#787F86;
-    --sep:rgba(236,238,240,.14); --edge:rgba(0,0,0,.5);
-    --accent:#D8B274; --accent-tint:#2A2318; --on-accent:#16181B;
-    --ok:#7ACF98; --warn:#D9B45F; --danger:#FF8577;
-    --bar:rgba(11,11,12,.72);
-    --shadow:0 .0625rem .1875rem rgba(0,0,0,.5);
+    --bg:#000000; --surface:#1C1C1E;
+    --fill:rgba(120,120,128,.36); --fill-2:rgba(120,120,128,.24); --seg-on:#636366;
+    --ink:#F5F5F7; --ink-2:rgba(235,235,245,.72); --ink-3:rgba(235,235,245,.42);
+    --sep:rgba(84,84,88,.65); --edge:rgba(0,0,0,.45);
+    --accent:#D8B274; --accent-tint:rgba(216,178,116,.18); --on-accent:#1D1D1F;
+    --ok:#30D158; --warn:#FF9F0A; --danger:#FF453A;
+    --material:rgba(28,28,30,.72); --material-hi:rgba(255,255,255,.16);
+    --shadow:0 .03125rem .125rem rgba(0,0,0,.4), 0 0 0 .03125rem rgba(255,255,255,.08);
+    --shadow-float:0 .625rem 1.75rem rgba(0,0,0,.5), 0 0 0 .03125rem rgba(255,255,255,.1);
   }
 }
 @media (prefers-contrast:more){
-  :root{--sep:rgba(22,24,27,.4); --ink-2:#3C424A; --ink-3:#5A6068}
-  .group,.chip,.seg{outline:.0625rem solid var(--ink-3)}
+  :root{--sep:rgba(60,60,67,.45); --ink-2:#3A3A3C; --ink-3:#636366; --material:var(--bg)}
+  .group,.chip,.seg,.tile,.disc,.btn{outline:.0625rem solid var(--ink-3)}
+}
+@media (prefers-contrast:more) and (prefers-color-scheme:dark){
+  :root{--sep:rgba(235,235,245,.55); --ink-2:#EBEBF0; --ink-3:#AEAEB2}
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro TC","PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
-  font-size:1.0625rem;line-height:1.7;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro TC","PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+  font-size:1.0625rem;line-height:1.65;letter-spacing:0;
+  font-optical-sizing:auto;
   color:var(--ink);background:var(--bg);
   -webkit-font-smoothing:antialiased;
   padding-bottom:env(safe-area-inset-bottom);
 }
-a{color:inherit}
-:focus-visible{outline:.125rem solid var(--accent);outline-offset:.125rem;border-radius:.25rem}
+a,button{color:inherit;touch-action:manipulation}
+:focus-visible{outline:.125rem solid var(--accent);outline-offset:.1875rem;border-radius:.75rem}
+.btn:focus-visible,.top-link:focus-visible{border-radius:999px}
 img{display:block;max-width:100%}
 
-.wrap{max-width:42.5rem;margin:0 auto;padding:0 1rem}
+.wrap{max-width:42.5rem;margin:0 auto;padding:0 1.25rem}
+@media (max-width:23.75rem){.wrap{padding:0 1rem}}
 
 /* ── 按壓回饋：pointerdown 當下就發生 ── */
 .press{transition:transform .1s ease-out}
@@ -65,27 +79,37 @@ img{display:block;max-width:100%}
 }
 
 /* ── Hero ── */
-.hero{padding:2.75rem 0 1.5rem;text-align:center}
+.hero{padding-top:3.25rem;padding-bottom:1.75rem;text-align:center}
 .avatar{
-  width:5.25rem;height:5.25rem;margin:0 auto 1.125rem;border-radius:50%;
-  overflow:hidden;background:var(--fill);box-shadow:var(--shadow);
+  width:5.25rem;height:5.25rem;margin:0 auto 1.25rem;border-radius:50%;
+  overflow:hidden;background:var(--fill);box-shadow:var(--shadow-float);
 }
 .avatar img{width:100%;height:100%;object-fit:cover}
 .name{
-  font-size:clamp(2rem,8vw,2.75rem);font-weight:700;line-height:1.1;
-  letter-spacing:-.015em;               /* 大字級收緊 */
+  font-size:clamp(2.125rem,8vw,2.875rem);font-weight:700;line-height:1.05;
+  letter-spacing:-.022em;
 }
 .name-en{
-  margin-top:.375rem;font-size:.8125rem;font-weight:500;line-height:1.5;
+  margin-top:.5rem;font-size:.8125rem;font-weight:500;line-height:1.45;
   letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);
 }
+.slogan{
+  margin:1.375rem auto 0;max-width:24rem;
+  font-size:clamp(1.3125rem,4.4vw,1.5rem);font-weight:600;line-height:1.3;
+  letter-spacing:-.016em;color:var(--ink);
+}
+.local-line{
+  margin:.5rem auto 0;
+  font-size:.8125rem;font-weight:500;line-height:1.5;letter-spacing:.02em;
+  color:var(--ink-2);
+}
 .role{
-  margin-top:1rem;font-size:1.0625rem;font-weight:600;line-height:1.5;
-  letter-spacing:0;color:var(--ink);
+  margin-top:1.25rem;font-size:1.0625rem;font-weight:600;line-height:1.45;
+  letter-spacing:-.011em;color:var(--ink);
 }
 .tagline{
-  margin:.5rem auto 0;max-width:24rem;
-  font-size:.9375rem;line-height:1.75;letter-spacing:.005em;color:var(--ink-2);
+  margin:.375rem auto 0;max-width:24rem;
+  font-size:.9375rem;line-height:1.65;letter-spacing:0;color:var(--ink-2);
 }
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.375rem;margin-top:1.25rem}
 .chip{
@@ -95,47 +119,63 @@ img{display:block;max-width:100%}
 }
 
 /* ── 分段控制（語言／導覽）：thumb 只動 transform ── */
-.seg{position:relative;display:grid;padding:.125rem;background:var(--fill);border-radius:.5625rem}
+.seg{position:relative;display:grid;padding:var(--pad-seg);background:var(--fill);border-radius:var(--radius-seg)}
 .seg-2{grid-template-columns:repeat(2,1fr)}
 .seg-4{grid-template-columns:repeat(4,1fr)}
 .seg button,.seg a{
   position:relative;z-index:1;display:flex;align-items:center;justify-content:center;
   min-height:2.25rem;border:0;background:transparent;cursor:pointer;
-  font:inherit;font-size:.9375rem;font-weight:500;color:var(--ink);
-  text-decoration:none;border-radius:.4375rem;
+  font:inherit;font-size:.9375rem;font-weight:500;letter-spacing:-.011em;color:var(--ink);
+  text-decoration:none;border-radius:calc(var(--radius-seg) - var(--pad-seg));
 }
 .seg [aria-selected="true"],.seg [aria-current]{font-weight:600}
 .seg-thumb{
-  position:absolute;top:.125rem;bottom:.125rem;left:.125rem;
-  border-radius:.4375rem;background:var(--seg-on);box-shadow:var(--shadow);
+  position:absolute;top:var(--pad-seg);bottom:var(--pad-seg);left:var(--pad-seg);
+  border-radius:calc(var(--radius-seg) - var(--pad-seg));background:var(--seg-on);box-shadow:var(--shadow);
   will-change:transform;
 }
 .lang{max-width:8.5rem;margin:1.5rem auto 0}
 .lang button{min-height:2rem;font-size:.875rem}
 
-/* ── 浮動導覽列：內容從底下捲過去 ── */
+/* ── 浮動導覽：一層玻璃膠囊，內容從底下捲過去 ── */
 .bar{
-  position:sticky;top:0;z-index:20;padding:.5rem 0;
-  background:var(--bar);
+  position:sticky;top:0;z-index:20;
+  padding:.625rem 0 .375rem;
+  background:transparent;
+}
+.bar .seg{
+  background:var(--fill);
+  border-radius:999px;
+  box-shadow:var(--shadow);
+}
+.bar.stuck .seg{
+  background:var(--material);
   -webkit-backdrop-filter:blur(1.25rem) saturate(180%);
   backdrop-filter:blur(1.25rem) saturate(180%);
+  box-shadow:var(--shadow-float), inset 0 .0625rem 0 var(--material-hi);
 }
+.bar .seg a,.bar .seg-thumb{border-radius:999px}
 .bar::after{
   content:"";position:absolute;left:0;right:0;top:100%;height:.75rem;pointer-events:none;
   background:linear-gradient(var(--edge),transparent);opacity:0;transition:opacity .2s ease;
 }
 .bar.stuck::after{opacity:1}
 @media (prefers-reduced-transparency:reduce){
-  .bar{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .bar,.bar.stuck{background:var(--bg)}
+  .bar .seg,.bar.stuck .seg{
+    background:var(--fill);
+    -webkit-backdrop-filter:none;backdrop-filter:none;
+    box-shadow:var(--shadow);
+  }
 }
 
 /* ── 區段與分組清單 ── */
-.sec{margin-top:2.25rem;scroll-margin-top:4.25rem}
+.sec{margin-top:2.75rem;scroll-margin-top:4.75rem}
 .sec>h2{
-  margin:0 .25rem .625rem;
-  font-size:1.3125rem;font-weight:700;line-height:1.3;letter-spacing:-.01em;
+  margin:0 .375rem .75rem;
+  font-size:1.375rem;font-weight:700;line-height:1.2;letter-spacing:-.016em;
 }
-.group{background:var(--surface);border-radius:.875rem;overflow:hidden;box-shadow:var(--shadow)}
+.group{background:var(--surface);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 .group>*{position:relative}
 .group>*+*::before{
   content:"";position:absolute;left:1rem;right:0;top:0;border-top:.0625rem solid var(--sep);
@@ -150,10 +190,10 @@ img{display:block;max-width:100%}
 .row-body{flex:1;min-width:0}
 .row-title{
   display:flex;align-items:center;gap:.375rem;flex-wrap:wrap;
-  font-size:1.0625rem;font-weight:600;line-height:1.4;letter-spacing:-.003em;
+  font-size:1.0625rem;font-weight:600;line-height:1.4;letter-spacing:-.011em;
 }
-.row-desc{margin-top:.1875rem;font-size:.875rem;line-height:1.6;color:var(--ink-2)}
-.row-meta{margin-left:auto;font-size:.8125rem;color:var(--ink-3);letter-spacing:.02em;white-space:nowrap}
+.row-desc{margin-top:.1875rem;font-size:.875rem;line-height:1.55;letter-spacing:0;color:var(--ink-2)}
+.row-meta{margin-left:auto;font-size:.8125rem;color:var(--ink-3);letter-spacing:.01em;white-space:nowrap}
 .chev{flex:none;width:.5rem;height:.5rem;border-right:.09375rem solid var(--ink-3);border-top:.09375rem solid var(--ink-3);transform:rotate(45deg)}
 .tag{
   padding:.0625rem .375rem;border-radius:.25rem;
@@ -167,33 +207,42 @@ img{display:block;max-width:100%}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.5rem}
 .tile{
   display:flex;align-items:center;gap:.5625rem;padding:.8125rem .875rem;
-  background:var(--surface);border-radius:.75rem;box-shadow:var(--shadow);
+  background:var(--surface);border-radius:var(--radius-sm);box-shadow:var(--shadow);
   text-decoration:none;color:inherit;font-size:.9375rem;font-weight:500;line-height:1.5;
 }
 
 /* 主行動列（深底） */
 .cta{display:flex;align-items:center;gap:.875rem;padding:.9375rem 1rem}
 .cta-body{flex:1;min-width:0}
-.cta-title{font-size:1rem;font-weight:600;line-height:1.4}
-.cta-desc{margin-top:.125rem;font-size:.8125rem;line-height:1.6;color:var(--ink-2)}
+.cta-title{font-size:1rem;font-weight:600;line-height:1.4;letter-spacing:-.011em}
+.cta-desc{margin-top:.125rem;font-size:.8125rem;line-height:1.5;letter-spacing:0;color:var(--ink-2)}
 .btn{
   flex:none;display:inline-flex;align-items:center;justify-content:center;
-  min-height:2.125rem;padding:0 .9375rem;border-radius:999px;
+  min-height:2.75rem;padding:0 1rem;border-radius:999px;
   background:var(--accent);color:var(--on-accent);
-  font-size:.875rem;font-weight:600;line-height:1;letter-spacing:.01em;
+  font-size:.875rem;font-weight:600;line-height:1.2;letter-spacing:0;
   text-decoration:none;white-space:nowrap;
+  box-shadow:inset 0 .0625rem 0 rgba(255,255,255,.28);
 }
 .btn.wecom{background:#1677FF;color:#fff}
-.btn.ghost{background:var(--fill);color:var(--ink)}
+.btn.ghost{background:var(--fill);color:var(--ink);box-shadow:none}
+.cta-entry{display:grid;justify-items:center}
+.hero .cta-entry{margin-top:1.5rem}
+.help-cta{margin:0 0 1rem}
+.btn.btn-prominent{
+  width:min(100%,22.5rem);min-width:0;min-height:3rem;padding:.75rem 1.375rem;
+  font-size:.9375rem;font-weight:600;line-height:1.35;letter-spacing:-.011em;
+  white-space:normal;text-align:center;
+}
 
 /* ── 關於我：可展開，彈簧驅動、可中斷 ── */
-.disc{background:var(--surface);border-radius:.875rem;overflow:hidden;box-shadow:var(--shadow)}
+.disc{background:var(--surface);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 .disc-btn{
   display:flex;align-items:center;justify-content:space-between;gap:.75rem;
   width:100%;padding:1rem;border:0;background:transparent;cursor:pointer;
   font:inherit;color:inherit;text-align:left;
 }
-.disc-label{font-size:1.0625rem;font-weight:600;line-height:1.4;letter-spacing:-.003em}
+.disc-label{font-size:1.0625rem;font-weight:600;line-height:1.4;letter-spacing:-.011em}
 .disc-hint{margin-top:.125rem;font-size:.8125rem;line-height:1.6;color:var(--ink-2)}
 .disc-icon{
   flex:none;width:1.625rem;height:1.625rem;border-radius:50%;background:var(--fill);
@@ -211,7 +260,7 @@ img{display:block;max-width:100%}
   font-size:.75rem;font-weight:600;line-height:1.5;letter-spacing:.06em;
   text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;
 }
-.item{font-size:.9375rem;line-height:1.7;letter-spacing:.002em}
+.item{font-size:.9375rem;line-height:1.65;letter-spacing:0}
 .item+.item{margin-top:.6875rem}
 .item-note{display:block;margin-top:.1875rem;font-size:.8125rem;line-height:1.65;color:var(--ink-2)}
 
@@ -227,8 +276,8 @@ img{display:block;max-width:100%}
 .footer-copy{margin-top:.25rem;font-size:.75rem;color:var(--ink-3);letter-spacing:.03em}
 
 /* ── 我可以怎麼幫你 ── */
-.sec-lede{margin:-.25rem .25rem .875rem;font-size:.9375rem;line-height:1.75;color:var(--ink-2)}
-.hint{display:block;margin:.75rem .25rem 0;font-size:.875rem;line-height:1.7;color:var(--ink-2);text-decoration:none}
+.sec-lede{margin:-.125rem .375rem 1rem;font-size:.9375rem;line-height:1.65;letter-spacing:0;color:var(--ink-2)}
+.hint{display:block;margin:.875rem .375rem 0;font-size:.875rem;line-height:1.65;letter-spacing:0;color:var(--ink-2);text-decoration:none}
 .hint b{color:var(--accent);font-weight:600}
 
 /* ── 語言切換 ── */
@@ -249,6 +298,15 @@ img{display:block;max-width:100%}
   <h1 class="name">陳執董 Jump</h1>
   <div class="name-en">Jump Chen · BNC Executive Director</div>
 
+  <p class="slogan">
+    <span class="zh">讓人脈變成生意的地方</span>
+    <span class="en-text">Where connections become business</span>
+  </p>
+  <p class="local-line">
+    <span class="zh">商業觀察・AI 實作・每月高雄小聚</span>
+    <span class="en-text">Business notes · Hands-on AI · Monthly gatherings in Kaohsiung</span>
+  </p>
+
   <div class="role">
     <span class="zh">台灣 × 大陸　跨境商務基礎設施建設者</span>
     <span class="en-text">Taiwan × China　Cross-border Business Infrastructure Builder</span>
@@ -257,6 +315,11 @@ img{display:block;max-width:100%}
     <span class="zh">幫助台灣人看見亞洲大陸市場的機會</span>
     <span class="en-text">Helping Taiwan see the opportunities across Asian markets.</span>
   </p>
+
+  <!-- 待確認：LINE 社群邀請連結 -->
+  <div class="cta-entry">
+    <a class="btn btn-prominent press" href="#"><span class="zh">加入陳執董的商業社群（LINE）</span><span class="en-text">Join Jump's Business Community (LINE)</span></a>
+  </div>
 
   <div class="chips">
     <span class="chip"><span class="zh">台灣行銷人協會 理事長</span><span class="en-text">Taiwan Marketers Association President</span></span>
@@ -418,8 +481,8 @@ img{display:block;max-width:100%}
             <div class="blk-label"><span class="zh">商務經歷</span><span class="en-text">Business Experience</span></div>
             <div class="item">
               <span class="zh">BNI 高雄南區 · 執行董事　2016–2023</span><span class="en-text">BNI Kaohsiung South · Executive Director　2016–2023</span>
-              <span class="item-note zh">2012 年加入成為大高雄第一位 BNI 會員，會員期間共同建立富樂、富恩、富新、富達四個分會；擔任董事顧問期間獨自建立富盛分會；2016 年正式簽約成為 BNI 執行董事</span>
-              <span class="item-note en-text">Joined in 2012 as the first BNI member in Greater Kaohsiung. Co-founded 4 chapters as a member and independently founded 1 as Director Consultant. Signed as BNI Executive Director in 2016.</span>
+              <span class="item-note zh">2012 年成為高雄第一位 BNI 會員，從零開始把 BNI 帶進高雄，會員期間共同建立富樂、富恩、富新、富達四個分會；擔任董事顧問期間獨自建立富盛分會；2016 年正式簽約成為 BNI 執行董事</span>
+              <span class="item-note en-text">In 2012, became the first BNI member in Kaohsiung and brought BNI to the city from scratch. Co-founded 4 chapters as a member and independently founded 1 as Director Consultant. Signed as BNI Executive Director in 2016.</span>
             </div>
             <div class="item">
               <span class="zh">JCI 亞太地區發展委員會 · 委員　2012–2013</span><span class="en-text">JCI Asia Pacific Development Committee · Member　2012–2013</span>
@@ -468,6 +531,10 @@ img{display:block;max-width:100%}
   <section class="sec" id="help">
     <h2><span class="zh">我可以怎麼幫你</span><span class="en-text">How I Can Help</span></h2>
     <p class="sec-lede"><span class="zh">這些年在台灣帶商會、在武漢自己開公司，最常被問的都是同一件事：想往大陸走，第一步該找誰、該怎麼走。如果你也正在想這件事，從下面任何一個開始聊都可以。</span><span class="en-text">After years of running business chapters in Taiwan and my own company in Wuhan, the question I hear most is: where do I start with the mainland market? If that's on your mind too, start with any of these.</span></p>
+    <!-- 待確認：LINE 社群邀請連結 -->
+    <div class="cta-entry help-cta">
+      <a class="btn btn-prominent press" href="#"><span class="zh">加入陳執董的商業社群（LINE）</span><span class="en-text">Join Jump's Business Community (LINE)</span></a>
+    </div>
     <div class="group">
       <a class="row press" href="https://lin.ee/8H1uS3c" target="_blank" rel="noopener">
         <div class="row-body">
@@ -606,7 +673,8 @@ img{display:block;max-width:100%}
       thumb.style.transform = 'translateX(' + v + 'px)';
     }});
     function layout(){
-      var w = (seg.clientWidth - 4) / count;
+      var pad = parseFloat(getComputedStyle(seg).paddingLeft) || 0;
+      var w = (seg.clientWidth - pad * 2) / count;
       thumb.style.width = w + 'px';
       return w;
     }
