@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F3EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F0F11" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <title>加我企業微信 — 陳建蒲</title>
 <style>
 /* 與首頁同一套標記，見 DESIGN.md。企業微信藍只留在這個平台的標題。 */
 :root{
   color-scheme:light dark;
-  --bg:#F2F2F7; --surface:#FFFFFF; --ink:#1D1D1F;
-  --ink-2:rgba(60,60,67,.78); --sep:rgba(60,60,67,.16);
-  --fill:rgba(120,120,128,.12); --wecom:#1677FF; --on-wecom:#FFFFFF;
-  --shadow:0 .03125rem .125rem rgba(0,0,0,.04), 0 .5rem 1.75rem rgba(0,0,0,.08);
-  --radius:1.375rem;
+  --bg:#F6F3EE; --surface:#FFFFFF; --ink:#18181A;
+  --ink-2:rgba(24,24,26,.70); --sep:rgba(24,24,26,.09);
+  --fill:rgba(60,48,32,.07); --wecom:#1677FF; --on-wecom:#FFFFFF;
+  --shadow:0 .0625rem .125rem rgba(40,30,15,.04), 0 1.5rem 3.5rem rgba(40,30,15,.12), 0 0 0 .0625rem rgba(40,30,15,.05);
+  --radius:1.5rem;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --bg:#000000; --surface:#1C1C1E; --ink:#F5F5F7;
-    --ink-2:rgba(235,235,245,.72); --sep:rgba(84,84,88,.65);
-    --fill:rgba(120,120,128,.24);
+    --bg:#0F0F11; --surface:#1B1B1E; --ink:#F4EFE6;
+    --ink-2:rgba(244,239,230,.70); --sep:rgba(244,239,230,.09);
+    --fill:rgba(235,225,210,.10);
     --shadow:0 .03125rem .125rem rgba(0,0,0,.4), 0 .5rem 1.75rem rgba(0,0,0,.45);
   }
 }
@@ -29,7 +29,7 @@
 body {
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro TC","PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
   font-size:1.0625rem; line-height:1.65; letter-spacing:0; font-optical-sizing:auto;
-  background: var(--bg); color:var(--ink);
+  background: radial-gradient(50rem 26rem at 85% -12%, rgba(201,164,112,.22), transparent 72%), var(--bg); color:var(--ink);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -134,7 +134,7 @@ body {
 
   <div class="card-body">
     <div class="qr-wrap">
-      <img src="IMG_3965.JPG" alt="企業微信 QR Code">
+      <img src="wecom-qr-illustration.png" alt="企業微信 QR Code">
     </div>
     <div class="person-name">陳建蒲</div>
     <div class="person-org">建橋云智科技有限公司</div>
