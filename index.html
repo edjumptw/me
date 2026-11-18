@@ -3,43 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="陳建蒲 Jump Chen — BNC 國際人脈商業建橋網絡執行董事。幫助台灣企業看見跨境市場的機會。">
+<meta name="description" content="陳執董 Jump Chen — BNC 國際人脈商業建橋網絡執行董事。幫助台灣企業看見跨境市場的機會。">
 <meta property="og:title" content="陳執董 edjump | BNC 國際人脈商業建橋網絡">
 <meta property="og:description" content="幫助台灣企業看見跨境市場的機會。">
 <meta property="og:type" content="profile">
 <meta property="og:image" content="https://edjumptw.github.io/me/avatar-illustration-480.jpg">
 <link rel="icon" type="image/jpeg" href="avatar-illustration-480.jpg">
-<meta name="theme-color" content="#F6F3EE" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F0F11" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <title>陳執董 edjump | BNC 國際人脈商業建橋網絡</title>
 <style>
 /* ─────────────────────────────────────────────
-   2026 改版預覽：暖紙色底、單一青銅重點色、深色主行動帶。
+   灰白分組底、單一青銅重點色、深色主行動帶。
    不載入網頁字型；尺寸用 rem／em；動畫只動 transform、opacity。
    ───────────────────────────────────────────── */
 :root{
   color-scheme:light dark;
-  --bg:#F6F3EE; --bg-glow:rgba(201,164,112,.22); --surface:#FFFFFF;
+  --bg:#F2F2F7; --surface:#FFFFFF;
   --fill:rgba(60,48,32,.08); --fill-2:rgba(60,48,32,.055); --seg-on:#FFFFFF;
-  --ink:#18181A; --ink-2:rgba(24,24,26,.70); --ink-3:rgba(24,24,26,.44);
+  --ink:#18181A; --ink-2:rgba(24,24,26,.70); --ink-3:#626267;
   --sep:rgba(24,24,26,.09); --line:rgba(24,24,26,.12); --edge:rgba(29,24,18,.06);
   --accent:#8A6538; --accent-deep:#6E4F2A; --accent-tint:rgba(138,101,56,.10); --on-accent:#FFFFFF;
   --gold:#D8B274;
   --night:#16171A; --night-2:#202125; --night-ink:#F4EFE6; --night-ink-2:rgba(244,239,230,.68); --night-sep:rgba(244,239,230,.10);
   --ok:#248A3D; --warn:#B25000; --danger:#D70015;
-  --material:rgba(246,243,238,.74); --material-hi:rgba(255,255,255,.7);
-  --shadow:0 .0625rem .125rem rgba(40,30,15,.04), 0 .25rem 1rem rgba(40,30,15,.04), 0 0 0 .0625rem rgba(40,30,15,.05);
-  --shadow-hover:0 .125rem .25rem rgba(40,30,15,.05), 0 .75rem 2rem rgba(40,30,15,.09), 0 0 0 .0625rem rgba(40,30,15,.06);
-  --shadow-float:0 1.5rem 3.5rem rgba(40,30,15,.16), 0 .25rem .75rem rgba(40,30,15,.08);
+  --material:rgba(242,242,247,.74); --material-hi:rgba(255,255,255,.7);
+  --shadow:0 .0625rem .125rem rgba(0,0,0,.04), 0 .25rem 1rem rgba(0,0,0,.04), 0 0 0 .0625rem rgba(0,0,0,.05);
+  --shadow-hover:0 .125rem .25rem rgba(0,0,0,.05), 0 .75rem 2rem rgba(0,0,0,.09), 0 0 0 .0625rem rgba(0,0,0,.06);
+  --shadow-float:0 1.5rem 3.5rem rgba(0,0,0,.16), 0 .25rem .75rem rgba(0,0,0,.08);
   --radius:1.5rem; --radius-sm:1.125rem; --radius-seg:.75rem; --pad-seg:.1875rem;
   --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro TC","PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --bg:#0F0F11; --bg-glow:rgba(216,178,116,.12); --surface:#1B1B1E;
+    --bg:#000000; --surface:#1C1C1E;
     --fill:rgba(235,225,210,.12); --fill-2:rgba(235,225,210,.08); --seg-on:#3A3A3E;
-    --ink:#F4EFE6; --ink-2:rgba(244,239,230,.70); --ink-3:rgba(244,239,230,.42);
+    --ink:#F4EFE6; --ink-2:rgba(244,239,230,.70); --ink-3:#AAA7A2;
     --sep:rgba(244,239,230,.09); --line:rgba(244,239,230,.14); --edge:rgba(0,0,0,.45);
     --accent:#D8B274; --accent-deep:#E6C893; --accent-tint:rgba(216,178,116,.16); --on-accent:#1A1814;
     --night:#000000; --night-2:#1A1A1D;
@@ -91,8 +91,6 @@ img{display:block;max-width:100%}
 /* ── Hero ── */
 .hero{
   position:relative;padding:1rem 0 2.75rem;
-  background:
-    radial-gradient(60rem 30rem at 85% -12%, var(--bg-glow), transparent 72%);
 }
 .topline{display:flex;justify-content:flex-end;align-items:center;min-height:2.75rem}
 .hero-grid{display:grid;gap:1.5rem;margin-top:.75rem}
@@ -103,13 +101,12 @@ img{display:block;max-width:100%}
 }
 .photo-frame img{width:100%;height:100%;object-fit:cover}
 .name-en{
-  display:flex;align-items:center;gap:.75rem;
-  font-size:.75rem;font-weight:600;line-height:1.45;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+  margin-top:.625rem;
+  font-size:.875rem;font-weight:500;line-height:1.55;
+  letter-spacing:0;color:var(--ink-2);
 }
-.name-en::before{content:"";width:1.75rem;height:.0625rem;background:currentColor;flex:none}
 .name{
-  margin-top:.75rem;
+  margin-top:0;
   font-size:clamp(2.5rem,10vw,4.75rem);font-weight:700;line-height:1.02;
   letter-spacing:-.03em;
 }
@@ -232,9 +229,9 @@ img{display:block;max-width:100%}
   transform:rotate(45deg);transition:transform .2s ease,border-color .2s ease;
 }
 .tag{
-  padding:.0625rem .5rem;border-radius:999px;
+  padding:.125rem 0;
   font-size:.6875rem;font-weight:600;line-height:1.6;letter-spacing:.04em;
-  background:var(--accent-tint);color:var(--accent-deep);
+  color:var(--accent-deep);
 }
 .logo{flex:none;width:1.5rem;height:1.5rem}
 .logo-lg{width:1.75rem;height:1.75rem}
@@ -294,8 +291,8 @@ img{display:block;max-width:100%}
   transition:transform .1s ease-out,background-color .2s ease,box-shadow .2s ease;
 }
 @media (hover:hover){.btn:hover{background:var(--accent-deep)}}
-.btn.wecom{background:#1677FF;color:#fff}
-@media (hover:hover){.btn.wecom:hover{background:#0F66E6}}
+.btn.wecom{background:#0965D6;color:#fff}
+@media (hover:hover){.btn.wecom:hover{background:#0756BA}}
 .btn.ghost{background:var(--fill);color:var(--ink);box-shadow:none}
 @media (hover:hover){.btn.ghost:hover{background:var(--line)}}
 .cta-entry{display:flex}
@@ -304,7 +301,7 @@ img{display:block;max-width:100%}
   width:100%;max-width:23.5rem;min-width:0;min-height:3.25rem;padding:.875rem 1.5rem;
   font-size:1rem;font-weight:600;line-height:1.35;letter-spacing:-.006em;
   white-space:normal;text-align:center;gap:.625rem;
-  box-shadow:inset 0 .0625rem 0 rgba(255,255,255,.22), 0 .75rem 1.75rem -.75rem rgba(110,79,42,.6);
+  box-shadow:inset 0 .0625rem 0 rgba(255,255,255,.22), 0 .75rem 1.75rem -.75rem rgba(0,0,0,.22);
 }
 .btn.btn-prominent::after{
   content:"";flex:none;width:.4375rem;height:.4375rem;
@@ -355,18 +352,16 @@ img{display:block;max-width:100%}
 .band{
   position:relative;isolation:isolate;color:var(--night-ink);
   margin-top:4rem;padding:3.25rem 0 3.5rem;
-  --surface:var(--night-2); --ink:var(--night-ink); --ink-2:var(--night-ink-2); --ink-3:rgba(244,239,230,.4);
+  --surface:var(--night-2); --ink:var(--night-ink); --ink-2:var(--night-ink-2); --ink-3:#AAA7A2;
   --sep:var(--night-sep); --fill:rgba(244,239,230,.1); --fill-2:rgba(244,239,230,.05);
   --accent:var(--gold); --accent-deep:#E6C893; --on-accent:#1A1814; --accent-tint:rgba(216,178,116,.16);
   --shadow:0 0 0 .0625rem rgba(244,239,230,.07);
 }
 .band::before{
   content:"";position:absolute;z-index:-1;top:0;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);
-  background:
-    radial-gradient(50rem 26rem at 90% 0%, rgba(216,178,116,.16), transparent 70%),
-    var(--night);
+  background:var(--night);
 }
-.band .btn.btn-prominent{box-shadow:inset 0 .0625rem 0 rgba(255,255,255,.35), 0 .75rem 2rem -.75rem rgba(216,178,116,.5)}
+.band .btn.btn-prominent{box-shadow:inset 0 .0625rem 0 rgba(255,255,255,.35), 0 .75rem 2rem -.75rem rgba(0,0,0,.32)}
 .sec-lede{margin:0 .125rem 1.5rem;font-size:1rem;line-height:1.75;color:var(--ink-2)}
 .help-cta{margin:0 0 1.25rem}
 .hint{display:block;margin:1.125rem .125rem 0;font-size:.875rem;line-height:1.7;color:var(--ink-2);text-decoration:none}
@@ -420,8 +415,8 @@ img{display:block;max-width:100%}
  </div>
  <div class="hero-grid">
  <div class="hero-text">
-  <div class="name-en">Jump Chen · BNC Executive Director</div>
   <h1 class="name">陳執董 Jump</h1>
+  <div class="name-en">Jump Chen · BNC Executive Director</div>
 
   <p class="slogan">
     <span class="zh">讓人脈變成生意的地方</span>
@@ -457,7 +452,7 @@ img{display:block;max-width:100%}
   </div>
  </div>
  <figure class="hero-photo">
-  <div class="photo-frame"><img fetchpriority="high" decoding="async" src="avatar-illustration-480.jpg" width="480" height="480" alt="陳建蒲 Jump Chen"></div>
+  <div class="photo-frame"><img fetchpriority="high" decoding="async" src="avatar-illustration-480.jpg" width="480" height="480" alt="陳執董 Jump Chen"></div>
  </figure>
  </div>
 </div>
